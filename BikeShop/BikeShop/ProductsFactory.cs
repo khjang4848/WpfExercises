@@ -33,8 +33,9 @@ namespace BikeShop
         static Random r = new Random(DateTime.Now.Millisecond);
         static Product generateRandomProduct()
         {
-            var titles = new string[] { "Classic city bike", "Vintage city bike", "Basic mountain bike", "Easy mountain bike", "Devil mountain bike" };
-            var colors = new string[] { "Red", "Blue", "Green", "Brown", "Gray", "Black" };
+            var titles = new[] { "Classic city bike", "Vintage city bike", "Basic mountain bike", "Easy mountain bike", "Devil mountain bike" };
+            var colors = new[] { "Red", "Blue", "Green", "Brown", "Gray", "Black" };
+
             return new Product()
             {
                 Title = pickRandom(titles),
@@ -53,6 +54,9 @@ namespace BikeShop
     public class Product : Notifier
     {
         private string _title;
+        private decimal _price;
+        private string _color;
+        private string _reference;
 
         public string Title
         {
@@ -64,8 +68,6 @@ namespace BikeShop
             }
         }
 
-        private decimal _price;
-
         public decimal Price
         {
             get => _price;
@@ -76,8 +78,6 @@ namespace BikeShop
             }
         }
 
-        private string _color;
-
         public string Color
         {
             get => _color;
@@ -87,8 +87,6 @@ namespace BikeShop
                 OnPropertyChanged("Color");
             }
         }
-
-        private string _reference;
 
         public string Reference
         {

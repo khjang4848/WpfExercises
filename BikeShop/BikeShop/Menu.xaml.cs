@@ -16,7 +16,7 @@ namespace BikeShop
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Contact.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/ProductsManagement.xaml", UriKind.Relative));
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
