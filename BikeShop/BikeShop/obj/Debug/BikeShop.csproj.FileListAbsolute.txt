@@ -44,3 +44,4 @@ D:\GitHub\WpfExercises\BikeShop\BikeShop\obj\Debug\BikeShop.exe
 D:\GitHub\WpfExercises\BikeShop\BikeShop\obj\Debug\BikeShop.pdb
 D:\GitHub\WpfExercises\BikeShop\BikeShop\obj\Debug\ProductsManagement.g.cs
 D:\GitHub\WpfExercises\BikeShop\BikeShop\obj\Debug\ProductsManagement.baml
+D:\GitHub\WpfExercises\BikeShop\BikeShop\obj\Debug\App.baml

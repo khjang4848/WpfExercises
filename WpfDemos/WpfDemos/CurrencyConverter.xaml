@@ -1,0 +1,25 @@
+﻿<Page x:Class="WpfDemos.CurrencyConverter"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfDemos"
+      xmlns:vm="clr-namespace:WpfDemos"
+      mc:Ignorable="d" 
+      d:DesignHeight="93" d:DesignWidth="235"
+      Title="CurrencyConverter">
+    <Page.DataContext>
+        <vm:CurrencyConverterViewModel />
+    </Page.DataContext>
+    <Grid>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="23" 
+                 Margin="98, 10, 0, 0" Width="120" VerticalAlignment="Top" TextWrapping="Wrap"
+                 Text="{Binding Euros, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBlock x:Name="TextBlock" HorizontalAlignment="Left" Margin="98, 38, 0, 0" 
+                   TextWrapping="Wrap" Text="{Binding Dollars}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TextBlock1" HorizontalAlignment="Left" Margin="10, 11, 0, 0" 
+                   TextWrapping="Wrap" Text="Amount in €" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TextBlock2" HorizontalAlignment="Left" Margin="10, 38, 0, 0" 
+                   TextWrapping="Wrap" Text="Amount in US $" VerticalAlignment="Top"/>
+    </Grid>
+</Page>

@@ -6,10 +6,17 @@
       xmlns:local="clr-namespace:BikeShop"
       mc:Ignorable="d" 
       d:DesignHeight="328.256" d:DesignWidth="454.286"
-      Title="ProductsManagement">
+      Title="ProductsManagement"
+      Background="{StaticResource background}">
 
     <Grid>
-        <TextBox Name="textBox" HorizontalAlignment="Left" Height="23" Margin="135,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <TextBox Name="textBox" HorizontalAlignment="Left" Height="23" Margin="135,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" />
+        <TextBlock x:Name="textBlock"
+                   HorizontalAlignment="Left"
+                   Margin="10,11,0,0"
+                   TextWrapping="Wrap"
+                   Text="Search:"
+                   VerticalAlignment="Top" />
         <DataGrid HorizontalAlignment="Left" Height="252" Margin="10,39,0,0" VerticalAlignment="Top" Width="290" Name="dataGrid"/>
         <Border DataContext="{Binding SelectedItem, ElementName=dataGrid}" BorderBrush="Black" BorderThickness="1" 
                 HorizontalAlignment="Left" 
@@ -17,7 +24,8 @@
                 VerticalAlignment="Top" Width="146" 
                 Background="#FFF7F3F3">
             <StackPanel Margin="10">
-                <TextBlock Text="Product Detail" FontWeight="Bold" FontSize="13" HorizontalAlignment="Center" Margin="10"></TextBlock>
+                <TextBlock Text="Product Detail" FontWeight="Bold" FontSize="13" 
+                           HorizontalAlignment="Center" Margin="10" />
                 <TextBlock Text="Title" />
                 <TextBox Text="{Binding Title, Mode=TwoWay}" />
                 <TextBlock Text="Price" />

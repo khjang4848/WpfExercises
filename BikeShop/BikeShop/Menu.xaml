@@ -6,8 +6,25 @@
       xmlns:local="clr-namespace:BikeShop"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="Menu">
-
+      Title="Menu"
+      Background="{StaticResource background}">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Fill="#AA000000" Margin="10, 10, 0, 0" />
+                            <Ellipse Fill="{TemplateBinding Background}" Margin="0, 0, 10, 10" />
+                            <Viewbox Margin="5, 5, 15, 15">
+                                <ContentPresenter />
+                            </Viewbox>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="button"
                 Content="Products"
